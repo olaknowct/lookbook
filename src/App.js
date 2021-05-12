@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SignUpPage from "./pages/sign-up/sign-up.component";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import FilterProduct from "./components/filter-product/filter-product.component";
+import ProductList from "./components/product-list/product-list.component";
+import PaginateButton from "./components/paginate-button/paginate-button.component";
+
+import "./App.css";
+
+const App = () => {
+    return (
+        <div className="app">
+            <FilterProduct></FilterProduct>
+            <ProductList></ProductList>
+            <PaginateButton></PaginateButton>
+        </div>
+    );
+};
 
 export default App;
